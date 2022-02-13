@@ -1,0 +1,9 @@
+---
+- name: Redis Cluster Install
+  hosts: redis
+  become: yes
+  become_user: root
+  gather_facts: no
+   roles:
+  - role: redis
+  - role: cluster

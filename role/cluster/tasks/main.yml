@@ -1,0 +1,21 @@
+---
+
+
+- name: Deploy on node 1
+  host: node1
+  shell:
+    redis-server $(pwd)/redis/master/redis.conf
+    redis-server $(pwd)/redis/slave/redis.conf
+
+- name: Deploy on node 2
+  host: node2
+  shell:
+    redis-server $(pwd)/redis/master/redis.conf
+    redis-server $(pwd)/redis/slave/redis.conf
+
+- name: Deploy on node 3
+  host: node3
+  shell:
+    redis-server $(pwd)/redis/master/redis.conf
+    redis-server $(pwd)/redis/slave/redis.conf
+    
